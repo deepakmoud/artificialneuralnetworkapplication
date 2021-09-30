@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" rel="stylesheet">
+
+    <link href="{{ url_for('static',filename = 'css/style.css')  }}" rel="stylesheet">
+
+    <title>Deep Learning </title>
+</head>
+<body style="background-color: #00ffff;">
+
+    <!-- navbar -->
+    <nav style="width: 100%;" class="navbar navbar-dark bg-secondary">
+         <a class="  navbar-brand" href="#" style="margin-left: 0px; margin-top: 0px; margin-right: 0px">
+             <img style="max-height: auto; width:100%;" src="{{ url_for('static',filename = 'image/PIET logo with tagline1.jpg')  }}" 
+             class="img-responsive" style="margin-top:0px;style=width: auto; height: auto; min-width:100%; min-height: auto;">
+        <div style="margin-top: 10px; margin-Right: 10px; color: white;">
+                     <a href="/ann" style="color: red"  margin-right: 50px;>HOME</a>
+                </div>
+        </a>
+    </nav>
+
+    <div class="container">
+    
+        <div class="jum" style="background-color: rgba(108, 117, 125, 0.7);">
+    <br>
+    <center>
+            <h1 class="display-20" allign="center" style="color: #fff;">Digit Recognition using  ANN</h1>
+            <h2 class="display-10" style="color: #fff;">Upload Digit Image.</h2>
+            </center>
+            <br>
+            <div style=" margin-left: 10px; margin-right: 10px;">
+                <h5 style="color: seashell"; style="text-align:justify">Digit Recognition  using Deep Learning</h5>
+            </div>
+            
+            <br><br>
+    
+   
+            <form method="POST" action="/ann/digit/digit" enctype="multipart/form-data">
+                <div class="input-group">
+                    <input type="file" class="form-control" name="input_image" accept=".png, .jpg, .jpeg">
+    
+                </div>
+                <br>
+                <div class="input-group">
+                    <span class="input-group-text">Model Name</span>
+                    <input type="text" name="name_of_model" value="Artificial Neural Network" class="form-control">
+                </div>
+    
+                <br><br>
+                
+
+    
+                <button onclick="$('#loading').show();" type="submit" class="btn btn-outline-light">Identify Image &#8987;
+                </button>
+            </form>
+            <br>
+            <div id="loading" style="display:none;">
+                <center><img class="img img-fluid" style="height:auto;width: auto;"
+                        src="{{ url_for('static' , filename = 'image/Lding.gif') }}" alt="" /></center>
+            </div>
+    
+    
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="fixed-bottom ">
+        <div class="bg-secondary " style="min-height: 40px;">
+    
+            <marquee style="color:#fff; margin-top: 7px;">
+                <h9>Developed by Department of Computer Engineering, PIET</h9>
+            </marquee>
+        </div>
+    </div>
+    <!-- change later-->
+    <script src="{{ url_for('static',filename = 'js/bootstrap.bundle.min.js')  }}"></script>
+    
+
+
+
+    <!-- script -->
+    <script>
+        $document
+    </script>
+</body>
+    
+</html>

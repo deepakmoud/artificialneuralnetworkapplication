@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename = 'css/style.css')  }}" rel="stylesheet">
+    <title>ML Trainer</title>
+
+</head>
+
+<body style="background-color:  #c5e6a6;">
+    <nav class="navbar navbar-dark bg-secondary">
+        <a class="navbar-brand" href="#" style="margin-left: 25px;">
+            <img src="{{ url_for('static',filename = 'image/logo.png')  }}" 
+             class="img-responsive" style="margin-top:10px;style="width: auto; height: auto; min-width: 430px;min-height: 600px;">
+          
+            
+           <div style="margin-top: 10px; margin-Right: 10px; color: white;">
+                    <a href="/supervised" style="color: red; margin-right: 10px;">HOME</a>
+                </div>
+           
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="output">
+            <br><br>
+            <center>
+                <h1> Support Vector Machine Classification</h1>
+                <h1>&#127881;&#127882; Hurrey Your Model Trained Successfully &#127882;&#127881;</h1>
+            </center>
+            <br><br>
+            <h4><span class="outputtext">🏹 Dataset Name : </span> {{dataset_name}}</h4>
+            <br>
+            <h4><span class="outputtext">🏹 Model Name : </span> {{model_name}}</h4>
+            <br>
+            <h4><span class="outputtext">🏹 The Top 5 Rows Of Your Dataset </span> </h4>
+            <br>
+            <div class="python-code">
+                <h6 style="text-decoration: underline; font-weight: bold;">The head() function is used to get the first
+                    n rows.</h6>
+                <li>Example :</li>
+                <p style="padding-left: 80px;">dataframe.head(5)</p>
+            </div>
+            <br>
+            Output &#128071;
+            <br>
+            <br>
+            {{table | safe}}
+
+            <br>
+
+            <h4><span class="outputtext">🏹 Dataset Description </span> </h4>
+            <br>
+            {{dataset_describe | safe}}
+
+            <br>
+            <h4><span class="outputtext">🏹 Dataset Shape : {{data_shape}} </span> </h4>
+            <br>
+            
+            <br>
+            <h4><span class="outputtext">🏹 The Training Accuracy :</span> <span style="color:rgb(141, 148, 245);;">
+                    {{var1}} </span></h4>
+            <br>
+            <h4><span class="outputtext">🏹 Precision :</span> <span style="color:rgb(141, 148, 245);;">
+                    {{var2}} </span></h4>
+            <br>
+            <br>
+            <h4><span class="outputtext">🏹 Recall :</span> <span style="color:rgb(141, 148, 245);;">
+                    {{var3}} </span></h4>
+            <br>
+            <br>
+            <h4><span class="outputtext">🏹 F-score :</span> <span style="color:rgb(141, 148, 245);;">
+                    {{var4}} </span></h4>
+            <br>
+           
+            <h4><span class="outputtext">You can Download Model here: 
+                <a href="{{url_for('download_model')}}"> <button type="button" class="btn btn-outline-primary">Download Model &#9655;</button></a>
+            </span>
+            </h4>
+            
+            <br><br>
+
+
+
+
+
+
+
+
+            <form method="POST" action="/supervised/svm/svmoutput" enctype="multipart/form-data">
+               
+                <h4>Prediction only for Features Age and Salary Choose appropriate dateset that contain onle two features Age and salary.  </h4>
+               <h4><h4>Model will Predict whether the item will be purchased or not </h4> </h4>
+                <div class="input-group">
+                    <span class="input-group-text">Enter Your dataset name</span>
+                    <input type="text" name="my_dataset" class="form-control">
+                </div><br>
+                <div class="input-group">
+                    <span class="input-group-text">Enter Age {{first_col}}</span>
+                    <input type="number"  name="num1" class="form-control">          
+                </div><br>
+                <div class="input-group">
+                    <span class="input-group-text">Enter salary {{second_col}}</span>
+                    <input type="number"  name="num2" class="form-control">          
+                </div>
+                <h4 style="color: black;">Have you applied Standarization on features ?</h4>
+                <div class="form-check">
+                    <input class="form-check-input" value="yes" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1" style="color:green;">
+                        Yes 
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" value="no" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2" style="color: red;">
+                        No  
+                    </label>
+                </div>
+                <br><br>
+                <button onclick="$('#loading').show();" type="submit" class="btn btn-outline-primary">Predict {{third_col}} &#8987;
+                </button>
+                <br>
+            </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+    </div>
+    <br><br><br><br>
+    <!-- footer -->
+    <div class="fixed-bottom ">
+        <div class="bg-secondary " style="min-height: 40px;">  
+            <marquee style="color:#fff; margin-top: 7px;">
+                <h9>Developed by Department of Computer Engineering, PIET</h9>
+            </marquee>
+        </div>
+    </div>
+    <!-- change later-->
+    <script src="{{ url_for('static',filename = 'js/bootstrap.bundle.min.js')  }}"></script>
+
+</body>
+
+</html>

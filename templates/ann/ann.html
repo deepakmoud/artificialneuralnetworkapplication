@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" rel="stylesheet">
+
+    <link href="{{ url_for('static',filename = 'css/style.css')  }}" rel="stylesheet">
+    <title>Deep Learning</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav style="width: 100%;" class="navbar navbar-dark bg-secondary">
+        <a class="  navbar-brand" href="#" style="margin-left: 0px; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-bottom:0px;">
+             <img style="max-height: auto; width:100%;" src="{{ url_for('static',filename = 'image/PIET logo with tagline1.jpg')  }}" 
+             class="img-responsive" style="margin-top:0px;style=width: auto; height: auto; min-width:100%; min-height: auto;">
+            <ul class="nav navbar-nav navbar-right">
+         
+           <a href="/" style="color: red; margin-right: 10px;">HOME</a>
+           </ul>
+        </a>
+    </nav>
+ 
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5 d-none d-sm-block d-sm-none d-md-block d-md-none d-lg-block">
+    
+                <img src="{{ url_for('static',filename = 'image/AcceptablePleasingDutchshepherddog.webp')  }}" class="img-fluid"
+                    style="width: auto; height: auto;  max-width: 550px;max-height: 600px;">
+                    
+            </div>
+    
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7 " style=" padding: 20px;">
+                <h1>Artificial Neural Network</h1>
+                <h4 style="color: sandybrown"; style="text-align:justify">An artificial neural network (ANN) is the component of artificial intelligence that is meant to simulate the functioning of a human brain.
+Processing units make up ANNs, which in turn consist of inputs and outputs. The inputs are what the ANN learns from to produce the desired output.
+Backpropagation is the set of learning rules used to guide artificial neural networks.
+The practical applications for ANNs are far and wide, encompassing finance, personal communication, industry, education, and so on.</h4>
+                <br>
+                <div class="row">
+                    
+                    <div class="col-12">
+    
+                        <h2>&#10032; Artificial Neural Network</h2>
+                        <ul>
+    
+                            <li>Image Classification Cat/Dog</li>
+                            <li>Signature Verification</li>
+                            <li>Signature Recognition </li>
+                            <li>Digit Recognition </li>
+                            <li>Character Recognition </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="container">
+        <div class="row">
+    
+            <h1>Image Classification </h1>
+            <br><br>
+    
+            <div class="col-xs-12 col-md-4" style="padding-top: 30px;">
+                <div class="card zoom">
+                    <center> <img src="{{ url_for('static',filename = 'image/Cats-Dogs-Classification-deep-learning.gif')  }}" style="height: 275px;"
+                            class="card-img-top" alt="not found"></center>
+                    <div class="card-body">
+                        <h5 class="card-title"; style="text-align:center">Image Classification Cat/Dog </h5>
+                        <p class="card-text"; style="text-align:justify"> Image classification Model is made up of Artificial Neural Network to classify image as cat or Dog</p>
+                        <a href="/ann/cat/cat"><button type="button"
+                                class="btn btn-outline-primary">Image Classification &#x270C;</button></a>
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+    
+            
+    
+    
+    
+            <div class="col-xs-12 col-md-4" style="padding-top: 30px;">
+                <div class="card  zoom">
+                    <center> <img src="{{ url_for('static',filename = 'image/signature verification.gif')  }}" class="card-img-top"
+                            style="height: 275px;" alt="not found"> </center>
+                    <div class="card-body">
+                        <h5 class="card-title"; style="text-align:center">Signature verification</h5>
+                        <p class="card-text"; style="text-align:justify">The objective of offline signature verification is to inspect the genuinely of signer that he/she is the same who claim to be the signer.</p>
+                            <a href="/ann/signatureverification/signatureverification"><button type="button"
+                                class="btn btn-outline-primary">Signature verification &#x270C;</button></a>
+                        
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+            <div class="col-xs-12 col-md-4 " style="padding-top: 30px;">
+                <div class="card zoom">
+                    <center><img src="{{ url_for('static',filename = 'image/signature recognition.png')  }}" style="height: 275px;"
+                            class="card-img-top" alt="not found"></center>
+                    <div class="card-body">
+                        <h5 class="card-title"; style="text-align:center">Signature Recognition</h5>
+                        <p class="card-text"; style="text-align:justify">The objective of offline signature recognition is to identify author of the signature this is a challenging task because of static (offline) scenario that uses scanned images of signatures.</p>
+                       <a href="/ann/signaturerecognition/signaturerecognition"><button type="button"
+                                class="btn btn-outline-primary">Signature Recognition &#x270C;</button></a>
+                    </div>
+                </div>
+    
+            </div>
+    
+           <div class="col-xs-12 col-md-4" style="padding-top: 30px;">
+                <div class="card  zoom">
+                    <center> <img src="{{ url_for('static',filename = 'image/IgnorantTediousAnaconda-size_restricted.gif')  }}" class="card-img-top"
+                            style="height: 275px;" alt="not found"> </center>
+                    <div class="card-body">
+                        <h5 class="card-title"; style="text-align:center">Digit Recognition</h5>
+                        <p class="card-text"; style="text-align:justify">It is Image classsification Application which is used to identify handwritten digit(0-9)</p>
+                            <a href="/ann/digit/digit"><button type="button"
+                                class="btn btn-outline-primary">Digit Recognition &#x270C;</button></a>
+                        
+                    </div>
+                </div>
+    
+            </div>   
+            
+     <div class="col-xs-12 col-md-4" style="padding-top: 30px;">
+                <div class="card  zoom">
+                    <center> <img src="{{ url_for('static',filename = 'image/1_RbjvUblCkRsLM8yMDCWS0Q.jpeg')  }}" class="card-img-top"
+                            style="height: 275px;" alt="not found"> </center>
+                    <div class="card-body">
+                        <h5 class="card-title"; style="text-align:center">Dog/ Cat breed classification</h5>
+                        <p class="card-text"; style="text-align:justify">It is Image classsification Application which is used to identify  breed of Cat and dof using Resnet 50 Model</p>
+                            <a href="/ann/breed/breed"><button type="button"
+                                class="btn btn-outline-primary">Image Classification &#x270C;</button></a>
+                        
+                    </div>
+                </div>
+    
+            </div>   
+            
+            <div class="col-xs-12 col-md-4" style="padding-top: 30px;">
+                <div class="card  zoom">
+                    <center> <img src="{{ url_for('static',filename = 'image/1_xifkz9v56y5Y800C_kSY3w.gif')  }}" class="card-img-top"
+                            style="height: 275px;" alt="not found"> </center>
+                    <div class="card-body">
+                        <h5 class="card-title"; style="text-align:center">Character Recognition</h5>
+                        <p class="card-text"; style="text-align:justify">It is Image classsification Application which is used to identify handwritten character(A-z) </p>
+                            <a href="/ann/character/character"><button type="button"
+                                class="btn btn-outline-primary">Character Recognition  &#x270C;</button></a>
+                        
+                    </div>
+                </div>
+    
+            </div>
+    
+    
+            
+        </div>
+    </div>
+
+
+<!-- footer -->
+<br><br>
+<div class="fixed-bottom ">
+    <div class="bg-secondary " style="min-height: 40px;">
+
+        <marquee style="color:#fff; margin-top: 7px;">
+            <h9>Developed by Department of Computer Engineering, PIET</h9>
+        </marquee>
+    </div>
+</div>
+<!-- change later-->
+<script src="{{ url_for('static',filename = 'js/bootstrap.bundle.min.js')  }}"></script>
+
+</body>
+
+</html>

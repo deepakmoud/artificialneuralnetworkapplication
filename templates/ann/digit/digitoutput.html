@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static',filename = 'css/bootstrap.min.css')  }}" rel="stylesheet">
+    <link href="{{ url_for('static',filename = 'css/style.css')  }}" rel="stylesheet">
+    <title>ML Trainer</title>
+
+</head>
+<body style="background-color: #00ffff;">
+<body>
+    <nav style="width: 100%;" class="navbar navbar-dark bg-secondary">
+         <a class="  navbar-brand" href="#" style="margin-left: 0px; margin-top: 0px; margin-right: 0px">
+             <img style="max-height: auto; width:100%;" src="{{ url_for('static',filename = 'image/PIET logo with tagline1.jpg')  }}" 
+             class="img-responsive" style="margin-top:0px;style=width: auto; height: auto; min-width:100%; min-height: auto;">
+       
+         <div style="margin-top: 10px; margin-Right: 10px; color: white;">
+                     <a href="/ann" style="color: red"  margin-right: 50px;>HOME</a>
+                </div>
+        </a>
+    </nav>
+
+    <div class="container">
+        <div class="output">
+            <br><br>
+            <center>
+                <h1> Deep Learning </h1>
+                <h2>&#127881;&#127882; Digit Recognition is done &#127882;&#127881;</h2>
+            </center>
+            <br><br>
+            <h4><span class="outputtext">Model Name : </span> {{model_name}}</h4>
+            <br>
+            <h4><span class="outputtext">Input Image </span> </h4>
+            
+            <br>
+           
+            <div class="container" style="max-height: 600px; max-width: 600px;">
+                <img class="img-fluid" src="/static/data-preprocess/{{visualize}}" alt="not found">
+
+            </div>
+            <br>
+            <h4><span class="outputtext">🏹 Model prediction Digit is </span> <span style="color:rgb(141, 148, 245);;">
+                    {{pred}} </span></h4>
+            <br>
+            
+
+        </div>
+    </div>
+    <br><br><br>
+
+
+   
+    <!-- footer -->
+
+    <br><br>
+    <div class="fixed-bottom ">
+        <div class="bg-secondary " style="min-height: 40px;">
+
+            <marquee style="color:#fff; margin-top: 7px;">
+                <h9>Developed by Department of Computer Engineering, PIET</h9>
+            </marquee>
+        </div>
+    </div>
+    <!-- change later-->
+    <script src="{{ url_for('static',filename = 'js/bootstrap.bundle.min.js')  }}"></script>
+
+</body>
+
+</html>
+
